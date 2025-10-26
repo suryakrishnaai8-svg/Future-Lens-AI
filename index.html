@@ -153,6 +153,19 @@
       .animate-fade-in-up {
         animation: fade-in-up 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
       }
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-slide-up {
+        animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
     </style>
   <script type="importmap">
 {
@@ -160,7 +173,9 @@
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12"
   }
 }
 </script>
@@ -173,6 +188,6 @@
       </video>
       <div class="absolute inset-0 bg-black/60"></div>
     </div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
