@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Lens AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden; /* Prevent scrollbars from the video background */
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      
+      /* Theme Variables */
+      :root, .theme-neon-blue {
+        --glow-1-hex: #06b6d4; /* cyan-500 */
+        --glow-2-hex: #67e8f9; /* cyan-300 */
+        --text-accent: #67e8f9;
+        --border-accent: #06b6d4;
+        --button-accent: #22d3ee; /* cyan-400 */
+        --button-accent-rgb: 34, 211, 238;
+        --button-text: #f0f9ff; /* sky-50 */
+        --ai-bubble-start: #0891b2; /* cyan-600 */
+        --ai-bubble-end: #0e7490; /* cyan-700 */
+        --user-bubble-start: #4f46e5; /* indigo-600 */
+        --user-bubble-end: #7c3aed; /* violet-600 */
+        --cyber-gradient: linear-gradient(90deg, #00f2fe, #4facfe, #a855f7, #f72585);
+      }
+      .theme-violet-flux {
+        --glow-1-hex: #a855f7; /* purple-500 */
+        --glow-2-hex: #d8b4fe; /* purple-300 */
+        --text-accent: #d8b4fe;
+        --border-accent: #a855f7;
+        --button-accent: #c084fc; /* purple-400 */
+        --button-accent-rgb: 192, 132, 252;
+        --button-text: #f5f3ff; /* violet-50 */
+        --ai-bubble-start: #7e22ce; /* purple-600 */
+        --ai-bubble-end: #6b21a8; /* purple-700 */
+        --user-bubble-start: #ec4899; /* pink-500 */
+        --user-bubble-end: #f43f5e; /* rose-500 */
+        --cyber-gradient: linear-gradient(90deg, #d8b4fe, #a855f7, #f72585, #f97316);
+      }
+      .theme-cyber-crimson {
+        --glow-1-hex: #ef4444; /* red-500 */
+        --glow-2-hex: #f97316; /* orange-500 */
+        --text-accent: #fca5a5; /* red-300 */
+        --border-accent: #ef4444;
+        --button-accent: #f87171; /* red-400 */
+        --button-accent-rgb: 248, 113, 113;
+        --button-text: #fef2f2; /* red-50 */
+        --ai-bubble-start: #dc2626; /* red-600 */
+        --ai-bubble-end: #b91c1c; /* red-700 */
+        --user-bubble-start: #f59e0b; /* amber-500 */
+        --user-bubble-end: #fb923c; /* orange-400 */
+        --cyber-gradient: linear-gradient(90deg, #f97316, #ef4444, #f72585, #a855f7);
+      }
+      
+      /* New Cyberpunk Styles */
+      .text-cyber-gradient {
+        background-image: var(--cyber-gradient);
+        background-clip: text;
+        -webkit-background-clip: text; /* For Safari/Chrome */
+        color: transparent;
+        background-size: 200% auto;
+        animation: gradient-animate 5s linear infinite;
+      }
+      .text-glow {
+        text-shadow:
+            0 0 5px rgba(from var(--glow-1-hex) r g b / 0.8),
+            0 0 10px rgba(from var(--glow-1-hex) r g b / 0.6),
+            0 0 20px rgba(from var(--glow-2-hex) r g b / 0.4);
+      }
+      .input-glow-focus:focus {
+        border-color: var(--button-accent);
+        box-shadow: 0 0 15px 2px rgba(from var(--button-accent-rgb) r g b / 0.5);
+      }
+      .glass-card-border::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 1rem; /* Same as card's border-radius */
+          padding: 1px; /* border thickness */
+          background: linear-gradient(45deg, var(--glow-1-hex), var(--glow-2-hex));
+          -webkit-mask:
+              linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+          mask:
+              linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+          pointer-events: none;
+          opacity: 0.3;
+          transition: opacity 0.4s ease-in-out;
+      }
+      .glass-card-border:hover::before {
+          opacity: 1;
+      }
+      .neon-button-shimmer {
+          position: relative;
+          overflow: hidden;
+      }
+      .neon-button-shimmer::after {
+          content: '';
+          position: absolute;
+          top: -150%;
+          left: -150%;
+          width: 400%;
+          height: 400%;
+          background-image: linear-gradient(
+              to right,
+              transparent,
+              rgba(255, 255, 255, 0.3),
+              transparent
+          );
+          transform: rotate(45deg) scale(0.5);
+          pointer-events: none;
+          opacity: 0;
+          transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.8s;
+      }
+      .neon-button-shimmer:hover::after {
+          transform: translate(25%, 25%) rotate(45deg) scale(1);
+          opacity: 1;
+      }
+
+      /* Animations */
+      @keyframes aurora-glow {
+        0% { transform: translate(-50%, -50%) rotate(0deg) scale(1.5); opacity: 0.3; }
+        50% { transform: translate(-50%, -50%) rotate(180deg) scale(2); opacity: 0.5; }
+        100% { transform: translate(-50%, -50%) rotate(360deg) scale(1.5); opacity: 0.3; }
+      }
+      @keyframes gradient-animate {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(10px) scale(0.98); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <div id="background-container" class="fixed inset-0 -z-10">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover">
+        <source src="https://storage.googleapis.com/aistudio-ux-team-public/demos/time-warp-bg.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

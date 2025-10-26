@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Future Lens AI",
+  "description": "An intelligent interactive application where users can have conversations with their AI-predicted future self, featuring a futuristic cyberpunk design and adaptive AI chat behavior.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
