@@ -23,6 +23,7 @@ export interface ChatMessage {
   text: string;
   timestamp: string;
   sources?: GroundingSource[];
+  feedback?: 'up' | 'down' | null;
 }
 
 export type ChatMode = 'balanced' | 'creative' | 'fast';

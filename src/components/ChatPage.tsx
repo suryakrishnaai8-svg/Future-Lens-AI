@@ -56,6 +56,19 @@ const MicrophoneIcon: React.FC<{ className?: string }> = ({ className }) => ( <s
 const SpeakerWaveIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.66 1.905H6.44l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" /><path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" /></svg> );
 const SpeakerXMarkIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.66 1.905H6.44l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06Z" /><path d="M17.28 9.72a.75.75 0 0 1 0 1.06l-2.47 2.47 2.47 2.47a.75.75 0 1 1-1.06 1.06l-2.47-2.47-2.47 2.47a.75.75 0 1 1-1.06-1.06l2.47-2.47-2.47-2.47a.75.75 0 0 1 1.06-1.06l2.47 2.47 2.47-2.47a.75.75 0 0 1 1.06 0Z" /></svg> );
 const GlobeIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c.506 0 1.006-.036 1.496-.106M3.284 14.251 12 21m0 0 8.716-6.749M12 3c.506 0 1.006.036 1.496.106M20.716 9.749 12 3m0 0L3.284 9.749m17.432 0a9.004 9.004 0 0 0-8.716-6.747M3.284 9.749a9.004 9.004 0 0 0 8.716-6.747M12 3v18" /></svg> );
+const ThumbsUpIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={className}>
+        <path d="M1 8.25a1.25 1.25 0 1 1 2.5 0v7.5a1.25 1.25 0 1 1-2.5 0v-7.5ZM11.057 2.22a.75.75 0 0 1 .593 1.251l-.527 1.189c.381.423.702.9.957 1.428.256.528.434 1.1.533 1.702.098.602.127 1.228.083 1.848-.044.62-.164 1.22-.353 1.782a5.25 5.25 0 0 1-.652 1.477l-.417.625a.75.75 0 1 1-1.25-.834l.416-.625a3.75 3.75 0 0 0 .466-1.054 4.88 4.88 0 0 0 .25-1.282c.03-.497.02-.972-.01-1.428-.031-.456-.118-.89-.25-1.29a3.52 3.52 0 0 0-.466-1.026l.487-1.1a.75.75 0 0 1 .723-.557ZM6.25 3.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5Z" />
+        <path d="M4.152 7.152a.75.75 0 0 1 .707-.058L6.44 7.62a11.16 11.16 0 0 1 3.14-.524h.87a.75.75 0 0 1 .75.75c0 .385.22.721.55.898l.054.028c.32.17.55.505.55.898a.75.75 0 0 1-.688.745c-.482-.046-1.026-.046-1.416-.044a1.88 1.88 0 0 1-1.11-.842c-.287-.492-.61-.925-.94-1.275a5.53 5.53 0 0 0-1.127-.923l-.337-.202a.75.75 0 0 1-.058-.707l.15-.259Z" />
+    </svg>
+);
+const ThumbsDownIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={className}>
+        <path d="M19 11.75a1.25 1.25 0 1 1-2.5 0v-7.5a1.25 1.25 0 1 1 2.5 0v7.5ZM8.943 17.78a.75.75 0 0 1-.593-1.251l.527-1.189c-.381-.423-.702-.9-.957-1.428-.256-.528-.434-1.1-.533-1.702-.098-.602-.127-1.228-.083-1.848.044-.62.164-1.22.353-1.782a5.25 5.25 0 0 1 .652-1.477l.417-.625a.75.75 0 1 1 1.25.834l-.416.625a3.75 3.75 0 0 0-.466 1.054 4.88 4.88 0 0 0-.25 1.282c-.03.497-.02.972.01 1.428.031.456.118.89.25 1.29a3.52 3.52 0 0 0 .466 1.026l-.487 1.1a.75.75 0 0 1-.723.557ZM13.75 16.5a.75.75 0 0 0 1.5 0v-1.5a.75.75 0 0 0-1.5 0v1.5Z" />
+        <path d="M15.848 12.848a.75.75 0 0 1-.707.058l-1.581-.527a11.16 11.16 0 0 1-3.14.524h-.87a.75.75 0 0 1-.75-.75c0-.385-.22-.721-.55-.898l-.054-.028c-.32-.17-.55-.505-.55-.898a.75.75 0 0 1 .688-.745c.482-.046 1.026-.046 1.416.044a1.88 1.88 0 0 1 1.11.842c.287.492.61.925.94 1.275a5.53 5.53 0 0 0 1.127.923l.337.202a.75.75 0 0 1 .058.707l-.15.259Z" />
+    </svg>
+);
+
 
 const formatTimeAgo = (isoString: string): string => {
     const date = new Date(isoString);
@@ -140,8 +153,6 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
   const audioChunksRef = useRef<Blob[]>([]);
   const outputAudioContextRef = useRef<AudioContext | null>(null);
   const currentAudioSourceRef = useRef<AudioBufferSourceNode | null>(null);
-  
-  const ai = useMemo(() => new GoogleGenAI({ apiKey: process.env.API_KEY as string }), []);
 
   const activeChat = history.find(c => c.id === activeChatId);
 
@@ -222,6 +233,21 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
     ));
   };
 
+  const handleFeedback = (messageIndex: number, feedback: 'up' | 'down') => {
+    if (!activeChatId) return;
+    setHistory(prev => prev.map(chat => {
+        if (chat.id === activeChatId) {
+            const updatedMessages = [...chat.messages];
+            const message = updatedMessages[messageIndex];
+            if (message && message.sender === 'ai') {
+                message.feedback = message.feedback === feedback ? null : feedback;
+            }
+            return { ...chat, messages: updatedMessages };
+        }
+        return chat;
+    }));
+  };
+
   const handleToggleRecording = async () => {
     if (isRecording) {
       mediaRecorderRef.current?.stop();
@@ -251,6 +277,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
     setIsLoading(true);
     setInput("Transcribing...");
     try {
+        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: { parts: [{ inlineData: { mimeType: 'audio/webm', data: base64Audio } }, { text: 'Transcribe this audio clip.' }] },
@@ -273,6 +300,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
     }
     setCurrentlySpeakingIndex(index);
     try {
+        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash-preview-tts',
             contents: [{ parts: [{ text }] }],
@@ -315,6 +343,8 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
     try {
         const { model, config, tools } = selectModelForQuery(currentInput);
         
+        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+
         const systemInstruction = `You ARE the future, wiser version of a person named ${userData.name}. Your personality is ${userData.personality}. You are to provide guidance, motivation, and a unique perspective based on their provided life details:
         - Age: ${userData.age}
         - Gender: ${userData.gender}
@@ -474,9 +504,21 @@ const ChatPage: React.FC<ChatPageProps> = ({ userData, onStartOver, theme, setTh
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 mt-2 px-1">
+                    <div className="flex items-center gap-3 mt-2 px-1">
                       {msg.timestamp && <p className="text-xs text-gray-500">{formatTimeAgo(msg.timestamp)}</p>}
-                      {msg.sender === 'ai' && <button onClick={() => handleSpeak(msg.text, index)} className="text-gray-400 hover:text-[var(--text-accent)] transition-colors" aria-label={currentlySpeakingIndex === index ? "Stop speaking" : "Read message aloud"}>{currentlySpeakingIndex === index ? <SpeakerXMarkIcon className="w-4 h-4" /> : <SpeakerWaveIcon className="w-4 h-4" />}</button>}
+                      {msg.sender === 'ai' && msg.text && (
+                        <>
+                            <button onClick={() => handleSpeak(msg.text, index)} className="text-gray-400 hover:text-[var(--text-accent)] transition-colors" aria-label={currentlySpeakingIndex === index ? "Stop speaking" : "Read message aloud"}>
+                                {currentlySpeakingIndex === index ? <SpeakerXMarkIcon className="w-4 h-4" /> : <SpeakerWaveIcon className="w-4 h-4" />}
+                            </button>
+                            <button onClick={() => handleFeedback(index, 'up')} className={`transition-colors ${msg.feedback === 'up' ? 'text-[var(--text-accent)]' : 'text-gray-400 hover:text-[var(--text-accent)]'}`} aria-label="Good response">
+                                <ThumbsUpIcon className="w-4 h-4" />
+                            </button>
+                            <button onClick={() => handleFeedback(index, 'down')} className={`transition-colors ${msg.feedback === 'down' ? 'text-[var(--text-accent)]' : 'text-gray-400 hover:text-[var(--text-accent)]'}`} aria-label="Bad response">
+                                <ThumbsDownIcon className="w-4 h-4" />
+                            </button>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
